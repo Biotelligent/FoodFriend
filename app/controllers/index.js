@@ -30,7 +30,7 @@ if (OS_IOS) {
   // }
   
   if (token === '') {
-    $.showController('Preferences');
+    $.showController('FoodList');
   } else {
     $.showController('SearchMap');
   }

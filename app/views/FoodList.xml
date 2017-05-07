@@ -6,7 +6,7 @@
     </View>
      
     <View id="filterView" top="100" class="settingslineview" height="40" layout="absolute" visible="true">  
-      <Label class="settingslabel" color="#5ea5f2" top="5" wordWrap="true" left="5" right="50" text="Find recipes with this..."/>  
+      <Label class="settingslabel" color="#5ea5f2" top="7" wordWrap="true" left="5" right="50" text="Find recipes for these..."/>  
       <Label id="dinnerButton" class="reviewiconlabel" color="#5ea5f2" top="0" right="10" width="30" height="40" onClick="handleDinnerClick"/>
     </View>
 
@@ -56,8 +56,7 @@
         <ListSection id="expirysection" top="10">
           <HeaderView>
             <View id="expiryHeaderView" top="0" height="40" width="180" backgroundColor="#bfbec0" layout="absolute">  
-              <Label id="expiryLabel" class="preftitlelabel" text="Expiring" top="6" left="20" right="60" height="Ti.UI.SIZE" wordWrap="true" textAlign="Ti.UI.TEXT_ALIGNMENT_CENTER"/>
-              <Button id="expiryAddButton" class="preficonbutton" top="0" right="2" title="+" zIndex="2" onClick="handleExpiryAddClick"/>
+              <Label id="expiryLabel" class="preftitlelabel" text="Expiring soon" top="6" left="20" right="20" height="Ti.UI.SIZE" wordWrap="true" textAlign="Ti.UI.TEXT_ALIGNMENT_CENTER"/>
             </View>
           </HeaderView>
         </ListSection>

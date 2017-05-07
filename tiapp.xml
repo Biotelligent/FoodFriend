@@ -15,8 +15,13 @@
     <property name="ti.ui.defaultunit" type="string">dp</property>
     <property name="ti.android.bug2373.finishfalseroot" type="bool">true</property>
     <ios>
+    	<team-id>Z3B5YJH5EM</team-id>
         <plist>
             <dict>
+            	 <key>NSPhotoLibraryUsageDescription</key>
+        <string>Scan your receipts</string>
+        <key>NSCameraUsageDescription</key>
+        <string>Scan your receipts</string>
             	<key>NSLocationWhenInUseUsageDescription</key>
             	<string>Find stores nearby</string>
                 <key>UISupportedInterfaceOrientations~iphone</key>

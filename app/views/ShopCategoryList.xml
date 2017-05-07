@@ -1,0 +1,43 @@
+<Alloy>
+    <View id="mainview" class="centercontainer" backgroundImage="/notfound.png" top="0" layout="composite">
+ 
+     <View id="headerView" class="headerview" top="0" height="100" backgroundColor="black" backgroundImage="/images/preferences.jpg" layout="composite">
+       <Button id="backiconButton" class="naviconbutton" top="40" left="0" title="<" zIndex="2" onClick="handleBackClick"/>
+       <Label id="headerLabel" class="prefheaderlabel" color="white" top="45" left="25" right="25" text="Menu" />
+     </View>
+
+      <ListView id="topsection" class="listview" defaultItemTemplate="menuTemplate" top="100" bottom="263" left="0" xbackgroundColor="transparent" 
+        canScroll="true" separatorColor="transparent" xonItemclick="handleItemClick">
+        <Templates>
+           <ItemTemplate name="menuTemplate" top="5" backgroundColor="transparent" height="20" accessoryType="Ti.UI.LIST_ACCESSORY_TYPE_DISCLOSURE">
+              <View bindId="subview" backgroundColor="transparent" top="0" left="10" right="10" layout="absolute">   
+                <View bindId="textsubview" backgroundColor="transparent" top="0" left="45" right="10" layout="vertical">   
+                  <Label class="menusubtitlelabel" bindId="title" top="0" left="0" right="0" height="20"/>
+                </View>  
+            </View>
+          </ItemTemplate>
+        </Templates>
+        
+        <ListSection top="0" headerTitle="Bread">
+          <ListItem itemId="gg1" title:text="Genius Gluten-Free White"/>
+          <ListItem itemId="gg2" title:text="Genius Gluten-Free Brown"/>
+          <ListItem itemId="gg3" title:text="Cranks Granary Medium"/>
+        </ListSection>
+        <ListSection top="0" headerTitle="Butter">
+          <ListItem itemId="gg1" title:text="Mainland unsalted 1kg"/>
+          <ListItem itemId="gg2" title:text="Mainland organic 1kg"/>
+        </ListSection>
+        <ListSection top="0" headerTitle="Cheese">
+          <ListItem itemId="gg1" title:text="Cheesly Vegan Mozarella Slices 10"/>
+          <ListItem itemId="gg2" title:text="Mrs Browns Stinky Blue 200g"/>
+          <ListItem itemId="gg3" title:text="Mrs Browns Halloumi 200g"/>
+          <ListItem itemId="gg3" title:text="Mrs Browns Vegetarian Cheddar 500g"/>
+        </ListSection>
+        <ListSection top="0" headerTitle="Milk">
+          <ListItem itemId="gg1" title:text="Genius Trim Milk"/>
+        </ListSection>
+      </ListView>
+
+     <ImageView bottom="0" left="0" right="0" preventDefaultImage="true" image="/images/shopdietaryinfo.jpg" onClick="handleBackClick"/>
+  </View>
+</Alloy>

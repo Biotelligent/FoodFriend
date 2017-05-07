@@ -200,8 +200,8 @@ function handleMapClick(evt) {
         var controller = Alloy.createController('ShopCategoryList', {title: evt.annotation.title});
         controller.openWindow({modal: true});                
       } else if (evt.annotation.menu) {
-        var controller = Alloy.createController('RestaurantMenu', {title: evt.annotation.title, menuUrl: evt.annotation.menuUrl});
-        controller.openWindow({modal: true});        
+        // var controller = Alloy.createController('RestaurantMenu', {title: evt.annotation.title, menuUrl: evt.annotation.menuUrl});
+        // controller.openWindow({modal: true});        
       }
     } else {
       Ti.API.info("Annotation " + evt.title + " clicked, id: " + evt.annotation.myid);

@@ -1,0 +1,73 @@
+<Alloy>
+    <View id="mainview" class="centercontainer" top="0" layout="composite">
+ 
+     <View id="headerView" class="headerview" top="0" height="100" backgroundColor="#473f4b" xbackgroundImage="/images/preferences.jpg" layout="composite" onClick="handleFilterClick">
+      <Label id="headerLabel" class="prefheaderlabel" color="white" top="45" left="20" right="20" text="Dietary Preferences" />
+     </View>
+     
+    <View id="filterView" top="100" class="settingslineview" height="40" layout="absolute" visible="false">  
+      <Label id="filtericonLabel" class="menuiconlabel" top="0" left="0" width="30" height="40" onClick="handleFilterClick"/>
+      <Label class="settingslabel" color="#b2b1b3" left="50" text="Use my preferences"/>  
+      <Switch id="usePreferenceSwitch" right="5" value="true" onChange="handleSwitchChange"/>  
+    </View>
+
+    <View id="listsView" class="container" xbackgroundColor="black" top="100" bottom="0" layout="absolute">
+
+      <ListView id="dietlistview" class="listview" defaultItemTemplate="prefTemplate" top="0" bottom="0" left="0" xbackgroundColor="transparent" 
+        width="160"
+        canScroll="true" separatorColor="transparent" onItemclick="handleItemClick">
+        <Templates>
+           <ItemTemplate name="prefTemplate" top="5" backgroundColor="transparent" height="35" accessoryType="Ti.UI.LIST_ACCESSORY_TYPE_NONE">
+              <View bindId="subview" backgroundColor="transparent" top="0" left="10" right="10" height="35" layout="absolute">   
+                <Label class="menuiconlabel" bindId="menuicon" top="0" left="0" width="30" height="30"/>
+                <View bindId="textsubview" backgroundColor="transparent" top="0" left="10" right="10" height="35" layout="vertical">   
+                  <Label class="preferencelabel" bindId="title" top="0" left="0" right="0" height="35"/>
+                </View>  
+            </View>
+          </ItemTemplate>
+        </Templates>
+        
+        <ListSection id="dietsection" top="10">
+          <HeaderView>
+            <View id="dietHeaderView" top="0" height="40" backgroundColor="#bfbec0" layout="absolute">  
+              <Label id="dietLabel" class="preftitlelabel" text="Diets" top="6" left="20" right="70" height="Ti.UI.SIZE" wordWrap="true" textAlign="Ti.UI.TEXT_ALIGNMENT_CENTER"/>
+              <Button id="dietAddButton" class="preficonbutton" top="0" right="2" title="+" zIndex="2" onClick="handleDietAddClick"/>
+            </View>
+          </HeaderView>
+          <!--ListItem itemId="FrequencyChart" title:text="Frequency Wheel" subtitle:text="View the frequency wheel"/-->
+        </ListSection>
+
+      </ListView>
+
+      <ListView id="allergylistview" class="listview" defaultItemTemplate="prefTemplate" top="0" bottom="0" 
+        left="160" 
+        backgroundColor="#d3d2d4" 
+        width="160"
+        canScroll="true" separatorColor="transparent" onItemclick="handleItemClick">
+        <Templates>
+           <ItemTemplate name="prefTemplate" top="5" backgroundColor="transparent" height="35" accessoryType="Ti.UI.LIST_ACCESSORY_TYPE_NONE">
+              <View bindId="subview" backgroundColor="transparent" top="0" left="10" right="10" height="35" layout="absolute">   
+                <Label class="menuiconlabel" bindId="menuicon" top="0" left="0" width="20" height="30"/>
+                <View bindId="textsubview" backgroundColor="transparent" top="0" left="10" right="10" height="35" layout="vertical">   
+                  <Label class="preferencelabel" bindId="title" top="0" left="0" right="0" height="35"/>
+                </View>  
+            </View>
+          </ItemTemplate>
+        </Templates>
+        
+        <ListSection id="allergysection" top="10">
+          <HeaderView>
+            <View id="allergyHeaderView" top="0" height="40" backgroundColor="#bfbec0" layout="absolute">  
+              <Label id="allergyLabel" class="preftitlelabel" text="Allergies" top="6" left="20" right="60" height="Ti.UI.SIZE" wordWrap="true" textAlign="Ti.UI.TEXT_ALIGNMENT_CENTER"/>
+              <Button id="allergyAddButton" class="preficonbutton" top="0" right="2" title="+" zIndex="2" onClick="handleAllergyAddClick"/>
+            </View>
+          </HeaderView>
+        </ListSection>
+
+      </ListView>
+
+
+      </View>
+
+  </View>
+</Alloy>

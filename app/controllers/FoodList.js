@@ -6,11 +6,31 @@ function handleDinnerClick(e) {
   } else {
     e.source.color = '#e7e7e7';    
   }
-};
+  
+   var dialog = Ti.UI.createAlertDialog({
+    cancel: 0,
+    title: 'Searching spoonacular...',
+    message: '',
+    text: '',
+    buttonNames: ['Searching...'],
+  });
+  dialog.addEventListener('click', function(e){
+        var controller = Alloy.createController('RestaurantMenu', {title: "Recipes", menuUrl: "https://spoonacular.com/recipes/roasted-asparagus-with-feta-450620"});
+        controller.openWindow({modal: true});        
+  });
+  
+  // setTimeout(function(){
+  	// dialog.close();
+  // },
+  // 1500
+  // );
+  
+  dialog.show();
+};  
+
 
 $.lib.config.load();
 
-$.expiryAddButton.title = fa.plus;
 $.foodAddButton.title = fa.plus;
 $.dinnerButton.text = fa.cutlery;
 $.expirylistview.left = $.platform.workingWidth / 2;
@@ -85,29 +105,7 @@ function handleFoodAddClick(e) {
   dialog.show();
 };
 
-function handleExpiryAddClick(e) {
-   var dialog = Ti.UI.createAlertDialog({
-    cancel: 0,
-    title: 'Add a new expiry type',
-    message: '',
-    text: '',
-    style: inputDialogStyle,
-    buttonNames: ['Cancel', 'Save'],
-  });
-  dialog.addEventListener('click', function(e){
-    if (e.index === e.source.cancel) {
-      return;
-    }
-    
-    var newitemname = e.text;
-    if (newitemname !== '') {
-      var newitem =
-        {properties: { itemId:"99", accessoryType: Ti.UI.LIST_ACCESSORY_TYPE_CHECKMARK }, xmenuicon: {text: fa.check}, title:{text: e.text, color: selectedColor} };
-      $.expirysection.appendItems([newitem]);
-    }
-  });
-  dialog.show();
-};
+
 
 function itemSelected(section, index, selected) {
   var item =  section.getItemAt(index);

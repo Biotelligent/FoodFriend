@@ -1,0 +1,12 @@
+<Alloy>
+    <View id="mainview" class="centercontainer" top="0" layout="composite">
+ 
+     <View id="headerView" class="headerview" top="0" height="100" backgroundColor="black" backgroundImage="/images/header.jpg" onClick="handleBackClick" layout="composite">
+       <Button id="backiconButton" class="naviconbutton" top="40" left="2" title="<" zIndex="2" onClick="handleBackClick"/>
+       <Label id="headerLabel" class="prefheaderlabel" color="white" top="45" left="20" right="20" text="Menu" />
+     </View>
+
+     <!--ImageView top="100" bottom="0" left="0" right="0" preventDefaultImage="true" image="/images/menugf.jpg" onClick="handleBackClick"/-->
+     <WebView id="webView" top="100" bottom="0" width="Ti.UI.FILL" onLoad="handleWebviewLoad"/>
+  </View>
+</Alloy>

@@ -32,13 +32,12 @@ var menuItems = [
   {properties: { itemId:"SearchMap" }, menuicon: { text: fa.locationArrow}, title:{text: "Browse near me"}, subtitle:{text:"Restaurants and shops near here"} },
   {properties: { itemId:"ScanReceipt" }, menuicon: {text: fa.camera}, title:{text:"Scan Receipt"}, subtitle:{text:"Scan your shopping list"} },
   {properties: { itemId:"FoodList" }, menuicon: {text: fa.check}, title:{text:"My Fridge"}, subtitle:{text:"Your fridge and ingredients"} },
-  {properties: { itemId:"RateReview" }, menuicon: {text: fa.cutlery}, title:{text:"Rate and review"}, subtitle:{text:"Share your feedback and rating for this location"} },
 ];
 $.menusection.setItems(menuItems);
 
 var settingsItems = [
-  {properties: { itemId:"Preferences" }, menuicon: {text: fa.apple}, title:{text: "My Preferences"}, subtitle:{text:"Set your dietary requirements"} },
-  {properties: { itemId:"About" }, menuicon: {text: fa.commentO}, title:{text: "About"}, subtitle:{text:"About this app"} },
+  {properties: { itemId:"Preferences" }, menuicon: {text: fa.apple}, title:{text: "My Preferences"}, subtitle:{text:"Your recipe and dietary preferences"} },
+  {properties: { itemId:"About" }, menuicon: {text: fa.commentO}, title:{text: "About"}, subtitle:{text:"About FoodFriend"} },
 ];
 $.settingssection.setItems(settingsItems);
 
@@ -46,7 +45,7 @@ function handleItemClick(e) {
   $.lib.logInfo('List click on e.itemIndex=' + e.itemIndex + ' e.itemId=' + e.itemId);
   if (e.itemIndex == 0) {
     $.showController(e.itemId, {areasearch: true});
-  } else if (e.itemIndex == 1) {
+  } else if ((e.section == 'settingssection') && (e.itemIndex == 1)) {
   	handleCameraButton();       
   } else {
     $.showController(e.itemId);
@@ -55,11 +54,12 @@ function handleItemClick(e) {
 
 function handleCameraButton(e, callbackSuccess) {
   // Won't work in simulator
-  if (Alloy.Globals.libdata.platform.isSimulator) {
+  if ($.lib.platform.isSimulator) {
     var imageTest = imageFile('appicon.png');
     if (callbackSuccess) {
       callbackSuccess(imageTest);
     }
+    alert("No camera mode in simulator...");
     return imageTest;
   }
 
