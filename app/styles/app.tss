@@ -1,0 +1,330 @@
+"Window[platform=ios]": {
+	statusBarStyle: Ti.UI.iPhone.StatusBar.LIGHT_CONTENT,
+  navBarHidden: false,
+},
+"Window[formFactor=handheld]": {
+  backgroundColor: 'black',
+  bottom: 0,
+},
+"Window[formFactor=tablet]": {
+  backgroundColor: 'black',
+  statusBarHidden: true,
+},
+"Window[platform=android]": {
+	navBarHidden: true,
+	windowSoftInputMode: Ti.UI.Android.SOFT_INPUT_ADJUST_PAN
+},
+'.indexwindow[platform=android]': {
+	exitOnClose: true,
+	navBarHidden: true,
+  fullscreen: false,
+},
+"View[platform=android]": {
+	softKeyboardOnFocus: Ti.UI.Android.SOFT_KEYBOARD_HIDE_ON_FOCUS
+},
+"ScrollView[platform=android]": {
+	scrollType: "vertical",
+},
+".container": {
+	backgroundColor: '#ffffff',
+  top: 0,
+	bottom: 0,
+},
+".centercontainer": {
+	backgroundColor: '#ffffff',
+  top: 0,
+	bottom: 0,
+},
+".centercontainer[formFactor=tablet]": {
+	backgroundColor: '#ffffff',
+  top: 0,
+	bottom: 0,
+	width: 320,
+	left: 200,
+	height: 568
+},
+"Label": {
+	// width: Ti.UI.SIZE,
+	// height: Ti.UI.SIZE,
+	color: "#000"
+},
+"#drawer":{
+	top: 20,
+	bottom: 0,
+	backgroundColor: 'white',
+  openDrawerGestureMode: "OPEN_MODE_BEZEL_PANNING_CENTERWINDOW", // "OPEN_MODE_ALL",
+  closeDrawerGestureMode: "CLOSE_MODE_BEZEL_PANNING_CENTERWINDOW",
+  leftDrawerWidth: 320,
+  orientationModes: "[Ti.UI.PORTRAIT]",
+  centerHiddenInteractionMode: 'OPEN_CENTER_MODE_NAVBAR',
+	animationMode: 'ANIMATION_ZOOM',
+	showShadow: true,
+},
+"#drawer[platform=ios]":{
+	statusBarStyle: 'Ti.UI.iPhone.StatusBar.LIGHT_CONTENT',
+},
+"#drawer[formFactor=tablet]":{
+	top: 20,
+	bottom: 0,
+	backgroundColor: 'white',
+  openDrawerGestureMode: "OPEN_MODE_BEZEL_PANNING_CENTERWINDOW", // "OPEN_MODE_ALL",
+  closeDrawerGestureMode: "CLOSE_MODE_BEZEL_PANNING_CENTERWINDOW",
+  leftDrawerWidth: 320,
+  centerHiddenInteractionMode: 'OPEN_CENTER_MODE_FULL',
+	animationMode: 'ANIMATION_ZOOM',
+	showShadow: false,
+},
+".menuiconlabel":{
+  font: {
+    fontFamily: Alloy.Globals.FontAwesome,
+    fontSize: 26,
+    fontWeight: 'normal',
+  },
+  textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+  verticalAlign: Ti.UI.TEXT_VERTICAL_ALIGNMENT_CENTER,
+	color: '#7fa57c',
+},
+".reviewiconlabel":{
+  font: {
+    fontFamily: Alloy.Globals.FontAwesome,
+    fontSize: 26,
+    fontWeight: 'normal',
+  },
+  height: 30,
+  width: 30,
+  textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+  verticalAlign: Ti.UI.TEXT_VERTICAL_ALIGNMENT_CENTER,
+	color: '#7fa57c',
+},
+".headerlabel":{
+	font: {
+		fontFamily: "Verdana",
+		fontSize: 28,
+		fontWeight: "bold"
+	},
+  textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT,
+  verticalAlign: Ti.UI.TEXT_VERTICAL_ALIGNMENT_BOTTOM,
+	color: 'white',
+},
+".prefheaderlabel":{
+	font: {
+		fontFamily: "Verdana",
+		fontSize: 22,
+		fontWeight: "bold"
+	},
+  textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+  verticalAlign: Ti.UI.TEXT_VERTICAL_ALIGNMENT_BOTTOM,
+	color: 'white',
+},
+".listview":{
+	backgroundColor: "#e7e7e7"  // light grey
+},
+".menutitlelabel":{
+	font: {
+		fontFamily: "Verdana",
+		fontSize: 18,
+		fontWeight: "bold"
+	},
+  textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT,
+  verticalAlign: Ti.UI.TEXT_VERTICAL_ALIGNMENT_BOTTOM,
+	color: '#7fa57c',
+},
+".menusubtitlelabel":{
+	font: {
+		fontFamily: "Verdana",
+		fontSize: 10,
+		fontWeight: "normal"
+	},
+  textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT,
+  verticalAlign: Ti.UI.TEXT_VERTICAL_ALIGNMENT_TOP,
+	color: '#5ea5f2',
+},
+".preferencelabel":{
+	font: {
+		fontFamily: "Verdana",
+		fontSize: 14,
+		fontWeight: "normal"
+	},
+  textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT,
+  verticalAlign: Ti.UI.TEXT_VERTICAL_ALIGNMENT_CENTER,
+	color: '#b3b2b4',
+	selectedColor: '#5ea5f2'
+},
+".preftitlelabel":{
+	font: {
+		fontFamily: "Verdana",
+		fontSize: 16,
+		fontWeight: "bold"
+	},
+  textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT,
+  verticalAlign: Ti.UI.TEXT_VERTICAL_ALIGNMENT_CENTER,
+	color: '#7fa57c',
+},
+
+".frequencylabel":{
+	font: {
+		fontFamily: "Verdana",
+		fontSize: 12,
+		fontWeight: "normal"
+	},
+  textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+  verticalAlign: Ti.UI.TEXT_VERTICAL_ALIGNMENT_TOP,
+	color: '#c0c0c0',
+	left: 10, right: 10
+},
+".settingslineview":{
+  top: 20,
+  height: 36,
+  left: 10,
+  right: 10,
+  backgroundColor: 'transparent',
+},
+".settingslabel":{
+	font: {
+		fontFamily: "Verdana",
+		fontSize: 16,
+		fontWeight: "normal"
+	},
+  textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT,
+  //verticalAlign: Ti.UI.TEXT_VERTICAL_ALIGNMENT_TOP,
+  left: 10,
+	color: '#c0c0c0',
+},
+".settingsinput":{
+	font: {
+		fontFamily: "Verdana",
+		fontSize: 15,
+		fontWeight: "normal"
+	},
+  textAlign: Ti.UI.TEXT_ALIGNMENT_RIGHT,
+  right: 10,
+  width: 120,
+  //verticalAlign: Ti.UI.TEXT_VERTICAL_ALIGNMENT_TOP,
+	tintColor: 'white',
+	color: '#40c1ff',
+},
+".visitlabel":{
+  color : '#b29600',
+  left  : 0,
+  right : 0,
+  textAlign : Ti.UI.TEXT_ALIGNMENT_CENTER,
+  font : {
+    fontSize : 13,
+    fontWeight: 'bold'
+  }
+},
+".seriesview":{
+  top: 0,
+  left: 0,
+  width: 250,
+  visible: false,
+},
+".percussionbutton":{
+	width: 60,
+	height: 45,
+	tintColor: 'white',
+	color: 'white', 
+	backgroundColor: 'black',
+	borderColor: 'white',
+	borderWidth: 2,
+	selectedColor: 'white',
+	selectedBackgroundColor: 'red', 
+  textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+},
+".iconpercussionbutton":{
+  font: {
+    fontFamily: Alloy.Globals.FontAwesome,
+    fontSize: 26,
+    fontWeight: 'normal',
+  },
+	width: 60,
+	height: 45,
+	tintColor: 'white',
+	color: 'white', 
+	backgroundColor: 'black',
+	borderColor: 'white',
+	borderWidth: 2,
+	selectedColor: 'red', 
+  textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+},
+".iconbutton":{
+  font: {
+    fontFamily: Alloy.Globals.FontAwesome,
+    fontSize: 26,
+    fontWeight: 'normal',
+  },
+	width: 40,
+	height: 40,
+	tintColor: 'white',
+	color: 'white', 
+	backgroundColor: 'black',
+	borderColor: 'white',
+	borderWidth: 1,
+	selectedColor: 'red', 
+  textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+},
+".naviconbutton":{
+  font: {
+    fontFamily: Alloy.Globals.FontAwesome,
+    fontSize: 26,
+    fontWeight: 'normal',
+  },
+	width: 40,
+	height: 40,
+	tintColor: 'white',
+	color: 'white', 
+	backgroundColor: 'transparent',
+	borderColor: 'white',
+	borderWidth: 0,
+	selectedColor: 'red', 
+  textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+},
+".preficonbutton":{
+  font: {
+    fontFamily: Alloy.Globals.FontAwesome,
+    fontSize: 26,
+    fontWeight: 'normal',
+  },
+	width: 40,
+	height: 40,
+	tintColor: '#7fa57c',
+	color: '#7fa57c', 
+	backgroundColor: 'transparent',
+	borderColor: 'white',
+	borderWidth: 0,
+	selectedColor: 'red', 
+  textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+},
+".zoombutton":{
+  font: {
+    fontFamily: Alloy.Globals.FontAwesome,
+    fontSize: 26,
+    fontWeight: 'normal',
+  },
+	width: 60,
+	height: 35,
+	tintColor: 'blue',
+	color: 'black', 
+	backgroundColor: 'white',
+	borderColor: 'black',
+	borderWidth: 1,
+	selectedColor: 'red', 
+  textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+  opacity: 0.70,
+},
+".volumebutton":{
+  font: {
+    fontFamily: Alloy.Globals.FontAwesome,
+    fontSize: 26,
+    fontWeight: 'normal',
+  },
+	width: 30,
+	height: 20,
+	tintColor: 'black',
+	color: 'black', 
+	backgroundColor: '#c0c0c0',
+	borderColor: 'white',
+	borderWidth: 1,
+	selectedColor: 'red', 
+  textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+}

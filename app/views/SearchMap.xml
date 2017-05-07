@@ -1,0 +1,15 @@
+<Alloy>
+  <View id="mainview" class="centercontainer" backgroundColor="black" top="0" layout="vertical">
+    <View id="topbar" class="navbar" top="0" height="49" layout="absolute">
+        <Button id="mainmenuButton" class="naviconbutton" top="0" left="2" title="-" zIndex="2" onClick="handleMainMenuClick"/>
+        <SearchBar id="search" barColor="#000" showCancel="false" height="43" top="0" left="44" right="44" onReturn="handleSearchReturn"/>
+        <ActivityIndicator id="activityView" class="naviconbutton" top="0" right="2" title="-" zIndex="-1" borderColor="#999" borderRadius="5" color="white" visible="false"/>
+        <Button id="filterButton" class="naviconbutton" top="0" right="2" title="-" zIndex="2" onClick="handleFilterClick"/>
+     </View>
+       <Module id="mapview" module="ti.map" method="createView" userLocation="true" enableZoomControls="false" regionFit="true" onClick="handleMapClick">
+         <Button id="zoomoutButton" class="zoombutton" bottom="30" right="130" title="-" zIndex="2" onClick="handleZoomOutClick"/>
+         <Button id="zoominButton" class="zoombutton"  bottom="30" right="70" title="+" zIndex="2" onClick="handleZoomInClick"/>
+         <Button id="locationButton" class="zoombutton"  bottom="30" right="10" title="+" zIndex="2" onClick="handleUserLocationClick"/>
+       </Module>
+  </View>
+</Alloy>

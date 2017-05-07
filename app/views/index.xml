@@ -1,0 +1,33 @@
+<Alloy>
+    <!-- Setting widget top=20 shows the iOS7 status bar -->
+    <Widget top="0" navbarHidden="false" id="drawer" src="nl.fokkezb.drawer" platform="ios">
+        <Window module="xp.ui" top="20" navbarHidden="false" role="leftWindow">
+          <Require src="MainMenu" type="view" id="mainmenu"/>
+        </Window>
+        
+        <Window module="xp.ui" top="20" navbarHidden="false" role="centerWindow" id="centerWindow">
+          <View id="blank"/>
+        </Window>
+
+        <!--
+        <NavigationWindow platform="ios" role="centerWindow" id="nav">
+            <Window>
+                <LeftNavButton>
+                    <Button onClick="toggle">Left</Button>
+                </LeftNavButton>
+                <Label>I am center</Label>
+                <RightNavButton>
+                    <Button onClick="toggle">Right</Button>
+                </RightNavButton>
+            </Window>
+        </NavigationWindow>
+        <View platform="android" role="centerWindow">
+            <Label>I am center</Label>
+        </View>
+        -->
+
+    </Widget>
+    <Window class="indexwindow" top="0" platform="android">
+      <Require src="MainMenu" type="view" id="mainmenu"/>
+    </Window>
+</Alloy>

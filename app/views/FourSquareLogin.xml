@@ -1,0 +1,6 @@
+<Alloy>
+	<View id="mainview" class="container" backgroundColor="white" borderRadius="20" borderColor="#aaa" zIndex="-1">
+    <Label id="closeLabel" class="menuiconlabel" top="0" left="0" width="30" height="40" onClick="handleCloseClick"/>
+    <WebView id="webView" top="25" width="Ti.UI.FILL" onBeforeLoad="handleWebviewBeforeLoad" onLoad="handleWebviewLoad"/>
+	</View>
+</Alloy>

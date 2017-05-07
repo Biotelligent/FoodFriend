@@ -1,0 +1,21 @@
+<Alloy>
+    <View id="mainview" class="centercontainer" backgroundImage="/notfound.png" top="20" layout="vertical">
+      
+    <View id="headerView" class="headerview" top="0" height="100" backgroundColor="473f4b" backgroundImage="/images/header.jpg" layout="composite" onClick="handleHeaderClick">
+      <!--ImageView top="0" left="0" preventDefaultImage="true" image="/images/header.jpg" /-->
+      <Label id="headerLabel" class="headerlabel" color="white" top="45" right="10" text="FoodFriend" />
+      <ImageView top="0" left="5" top="30" preventDefaultImage="true" image="/images/avatar120.png" />
+    </View>
+
+    <View top="20" class="settingslineview" layout="absolute">  
+      <Label class="settingslabel" top="10" text="Feedback" color="#7fa57c"/>  
+      <TextField id="dmxhostInput" class="settingsinput" width="200" top="5" height="80" backgroundColor="#e7e7e7" hintText="Send us your comments!" value="" onReturn="handleInputReturn"/>  
+    </View>
+    
+    <View id="aboutView" top="240" layout="absolute">  
+      <Label id="aboutLabel" class="menusubtitlelabel" top="0" left="30" right="30" height="Ti.UI.SIZE" wordWrap="true" textAlign="Ti.UI.TEXT_ALIGNMENT_CENTER"/>
+      <Label id="visitLabel" class="visitlabel" color="#5ea5f2" top="50" textAlign="Ti.UI.TEXT_ALIGNMENT_CENTER" text="http://www.freedomfrom.co.uk"/>
+      <Label id="copyrightLabel" class="menusubtitlelabel" top="80" left="30" right="30" height="Ti.UI.SIZE" wordWrap="true" textAlign="Ti.UI.TEXT_ALIGNMENT_CENTER"/>
+    </View>
+  </View>
+</Alloy>

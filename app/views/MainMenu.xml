@@ -1,0 +1,41 @@
+<Alloy>
+	<View id="mainview" class="container" xbackgroundColor="black" top="0" bottom="0">
+	  <View id="headerView" class="headerview" top="0" height="100" backgroundColor="black" backgroundImage="/images/header.jpg" layout="composite">
+	    <!--ImageView top="0" left="0" preventDefaultImage="true" image="/images/header.jpg" /-->
+      <Label id="headerLabel" class="headerlabel" color="white" top="45" right="40" text="FoodFriend" />
+      <ImageView top="0" left="5" top="30" preventDefaultImage="true" image="/images/avatar.png" />
+    </View>
+    
+    <View class="container" xbackgroundColor="black" top="100" bottom="0" layout="vertical">
+      <Button id="loginButton" class="loginbutton" top="0" left="2" right="2" title="Sign In"/>
+    
+      <ListView id="topsection" class="listview" defaultItemTemplate="menuTemplate" top="0" bottom="0" left="0" xbackgroundColor="transparent" 
+        canScroll="false" separatorColor="transparent" onItemclick="handleItemClick">
+        <Templates>
+           <ItemTemplate name="menuTemplate" top="5" backgroundColor="transparent" height="56" accessoryType="Ti.UI.LIST_ACCESSORY_TYPE_DISCLOSURE">
+              <View bindId="subview" backgroundColor="transparent" top="0" left="10" right="10" height="54" layout="absolute">   
+                <Label class="menuiconlabel" bindId="menuicon" top="0" left="0" width="30" height="40"/>
+                <View bindId="textsubview" backgroundColor="transparent" top="0" left="45" right="10" height="54" layout="vertical">   
+                  <Label class="menutitlelabel" bindId="title" top="0" left="0" right="0" height="Ti.UI.SIZE"/>
+                  <Label class="menusubtitlelabel" bindId="subtitle" top="2" left="0" right="0" height="Ti.UI.SIZE" wordWrap="true"/>
+                </View>  
+            </View>
+          </ItemTemplate>
+        </Templates>
+        
+        <ListSection id="menusection" top="10">
+        </ListSection>
+  
+        <ListSection id="settingssection">
+          <HeaderView>
+            <View>
+               <ImageView top="0" left="0" right="0" height="80" preventDefaultImage="true" image="/notfound.png"/>
+            </View>
+          </HeaderView>
+          <ListItem itemId="Settings" title:text="My Preferences" subtitle:text="Set your dietary requirements"/>
+        </ListSection>
+      </ListView>
+      </View>
+
+  	</View>
+</Alloy>
